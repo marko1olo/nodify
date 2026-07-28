@@ -5,6 +5,7 @@
 > - Breaking Changes:
 > - Features:
 > - Bugfixes:
+>	- Fixed NodifyEditor.SelectedItems and NodifyEditor.SelectedConnections to synchronize the selection when an item is replaced in the bound collection
 
 #### **Version 7.3.0**
 

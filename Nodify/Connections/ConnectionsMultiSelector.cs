@@ -236,18 +236,8 @@ namespace Nodify
                     break;
 
                 case NotifyCollectionChangedAction.Add:
-                    IList? newItems = e.NewItems;
-                    if (newItems != null)
-                    {
-                        IList selectedItems = base.SelectedItems;
-                        for (var i = 0; i < newItems.Count; i++)
-                        {
-                            selectedItems.Add(newItems[i]);
-                        }
-                    }
-                    break;
-
                 case NotifyCollectionChangedAction.Remove:
+                case NotifyCollectionChangedAction.Replace:
                     IList? oldItems = e.OldItems;
                     if (oldItems != null)
                     {
@@ -255,6 +245,16 @@ namespace Nodify
                         for (var i = 0; i < oldItems.Count; i++)
                         {
                             selectedItems.Remove(oldItems[i]);
+                        }
+                    }
+
+                    IList? newItems = e.NewItems;
+                    if (newItems != null)
+                    {
+                        IList selectedItems = base.SelectedItems;
+                        for (var i = 0; i < newItems.Count; i++)
+                        {
+                            selectedItems.Add(newItems[i]);
                         }
                     }
                     break;
