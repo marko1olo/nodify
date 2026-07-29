@@ -6,6 +6,7 @@
 > - Features:
 > - Bugfixes:
 >	- Fixed dragging correcting the location of containers that were not moved when EnableDraggingContainersOptimizations is false
+>	- Fixed SelectArea, InvertSelection and SelectAll adding ItemContainers whose IsSelectable is false to the selection
 
 #### **Version 7.3.0**
 
