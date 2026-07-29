@@ -5,6 +5,7 @@
 > - Breaking Changes:
 > - Features:
 > - Bugfixes:
+>	- Fixed dragging correcting the location of containers that were not moved when EnableDraggingContainersOptimizations is false
 
 #### **Version 7.3.0**
 
