@@ -5,6 +5,7 @@
 > - Breaking Changes:
 > - Features:
 > - Bugfixes:
+>	- Fixed EditorGestures.Unbind not unbinding the GroupingNode gestures
 
 #### **Version 7.3.0**
 

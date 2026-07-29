@@ -647,6 +647,7 @@ namespace Nodify.Interactivity
             ItemContainer.Unbind();
             Connector.Unbind();
             Connection.Unbind();
+            GroupingNode.Unbind();
             Minimap.Unbind();
         }
     }
