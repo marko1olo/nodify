@@ -868,13 +868,18 @@ namespace Nodify
             IsDragging = true;
             IsBulkUpdatingItems = true;
 
-            containers.Align(alignment, relativeTo);
+            try
+            {
+                containers.Align(alignment, relativeTo);
+            }
+            finally
+            {
+                IsBulkUpdatingItems = false;
+                // Draw the containers at the new position.
+                ItemsHost?.InvalidateArrange();
 
-            IsBulkUpdatingItems = false;
-            // Draw the containers at the new position.
-            ItemsHost.InvalidateArrange();
-
-            IsDragging = false;
+                IsDragging = false;
+            }
         }
 
         /// <summary>

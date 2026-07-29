@@ -10,6 +10,13 @@ namespace Nodify
         public static void Align(this IEnumerable<ItemContainer> values, Alignment alignment, ItemContainer? relativeTo)
         {
             var containers = values as IReadOnlyCollection<ItemContainer> ?? values.ToList();
+            if (containers.Count == 0)
+            {
+                // Each alignment below folds Min or Max over the collection when there is no instigator,
+                // and those throw on an empty sequence.
+                return;
+            }
+
             switch (alignment)
             {
                 case Alignment.Top:

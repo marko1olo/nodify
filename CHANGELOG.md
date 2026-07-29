@@ -5,6 +5,7 @@
 > - Breaking Changes:
 > - Features:
 > - Bugfixes:
+>	- Fixed `NodifyEditor.AlignContainers` throwing on an empty collection and leaving the editor permanently unable to align or drag
 
 #### **Version 7.3.0**
 
