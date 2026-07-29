@@ -6,6 +6,7 @@
 > - Features:
 > - Bugfixes:
 >	- Fixed EditorGestures.Unbind not unbinding the GroupingNode gestures
+>	- Fixed EditorGestures.SelectionGestures.Unbind leaving the Cancel gesture bound to Escape
 
 #### **Version 7.3.0**
 

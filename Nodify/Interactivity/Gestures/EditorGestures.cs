@@ -101,7 +101,14 @@ namespace Nodify.Interactivity
             /// Unbinds the all the gestures used for selection.
             /// </summary>
             public void Unbind()
-                => Apply(None);
+            {
+                Replace.Unbind();
+                Remove.Unbind();
+                Append.Unbind();
+                Invert.Unbind();
+                Select.Unbind();
+                Cancel.Unbind();
+            }
         }
 
         /// <summary>Gestures for the item containers.</summary>
